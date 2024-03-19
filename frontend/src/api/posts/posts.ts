@@ -5,7 +5,7 @@ export const postsApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
     endpoints: (builder) => ({
         getPosts: builder.query<types.Posts, void>({
-            query: () => '/posts',
+            query: () => 'http://localhost:3000/api/posts',
         }),
         createPost: builder.mutation<types.Post, Omit<types.Post, '_id'>>({
             query: (body) => ({
