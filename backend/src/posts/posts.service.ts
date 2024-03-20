@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreatePostDto } from './dto/createPost.dto';
 import { Sequelize } from 'sequelize-typescript';
 import { InjectModel } from '@nestjs/sequelize';
-import { Post } from 'src/Models/Post.model';
+import { Post } from 'src/models/post.model';
 
 @Injectable()
 export class PostsService {
