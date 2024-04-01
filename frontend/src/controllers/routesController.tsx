@@ -8,15 +8,15 @@ const RoutesController = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to={routes.posts} />} />
                 <Route element={<CommonLayout />}>
+                    <Route path="/" element={<Navigate to={routes.posts} />} />
                     <Route path={routes.posts} element={<Posts />} />
                     <Route
                         path={routes.createPosts}
                         element={<CreatePosts />}
                     />
+                    <Route path="*" element={404} />
                 </Route>
-                <Route path="*" element={404} />
             </Routes>
         </BrowserRouter>
     );
